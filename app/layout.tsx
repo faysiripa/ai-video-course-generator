@@ -5,7 +5,8 @@ import "./globals.css";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
-import { Provider } from "@radix-ui/react-tooltip";
+import Provider from "./provider";
+
 
 const AppFont = DM_Sans({ subsets: ['latin'] })
 
@@ -22,9 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={AppFont.className}
-        >
+        <body className={AppFont.className}>
           <Provider>
             {children}
           </Provider>
